@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+    <!--Relative Layout to hold background and align card with text-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:orientation="horizontal">
+        <!--Text view to hold points and name of the current player-->
+        <TextView
+            android:id="@+id/turn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center_horizontal"
+            android:text="It's player's turn!"
+            android:textColor="#FFFFFF"
+            android:textSize="22dp" />
+    </LinearLayout>
+    <!--Card imageview-->
+    <ImageView
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:onClick="imageclick"
+        android:src="@drawable/card" />
+    <!--Textview to hold text, aligned with the card to be centered-->
+    <TextView
+        android:id="@+id/cardtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/card"
+        android:layout_alignTop="@+id/card"
+        android:layout_alignRight="@+id/card"
+        android:layout_alignBottom="@id/card"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+    <!--Over and under buttons aligned to the center top or bottom of the card-->
+    <Button
+        android:id="@+id/over"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/card"
+        android:layout_alignTop="@+id/card"
+        android:layout_alignRight="@id/card"
+        android:background="@android:color/transparent"
+        android:onClick="over" />
+
+    <Button
+        android:id="@+id/under"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/card"
+        android:layout_alignRight="@id/card"
+        android:layout_alignBottom="@+id/card"
+        android:background="@android:color/transparent"
+        android:onClick="under" />
+    <!--Linear layout to hold the other buttons-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button"
+            android:onClick="instruct"
+            android:text="INSTRUCTIONS" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button"
+            android:onClick="reset"
+            android:text="RESET &amp; SHUFFLE" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button"
+            android:onClick="scoreboard"
+            android:text="SCOREBOARD" />
+    </LinearLayout>
+</RelativeLayout>

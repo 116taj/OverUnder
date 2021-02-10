@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+    <!--Linear layout to hold title and continue button, placed here due to dynamic edit texts-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/settings" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button"
+            android:minWidth="100dp"
+            android:onClick="game"
+            android:text="Continue" />
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <!--Textview and edittext getting player count-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Player count:"
+                android:textColor="#FFFFFF"
+                android:textSize="26dp" />
+
+            <EditText
+                android:id="@+id/playercount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Number of players"
+                android:inputType="number"
+                android:minWidth="150dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
